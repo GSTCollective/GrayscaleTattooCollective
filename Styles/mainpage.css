@@ -1,5 +1,36 @@
 body {
 
-    background-color: gray;
- 
+    animation: gradientAnimation 5s infinite;
+    background: linear-gradient(90deg,    black,  rgb(179, 178, 178), black);
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+header {
+    text-align: center;
+    
+}
+#logo {
+    border-radius: 35%;
+    box-shadow: 0px 0px 100px 1px  black;
+    fill: black;
+    max-width: 500px;
+    max-height: 500px;
+    /*background-color: black; */
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    font-size: 35px;
+    color: white;
+    text-shadow: 0px 0px 15px black, 0px 0px 15px black, 0px 0px 15px black ;
 }
