@@ -1,10 +1,11 @@
-* {
+* { /* HTML resetter */
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: rgb(0, 0, 0);
-    
+    color: white;
 }
 
 .loader-wrapper {
@@ -16,12 +17,12 @@ body {
     flex-direction: column;
     align-items: center;
     opacity: 1;
-    transition: opacity 0.5s ease; /* smooth fade transition */
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
 }
 
 .loader-wrapper.hidden {
     opacity: 0;
-    pointer-events: none; /* no pointer events on hidden loader */
+    pointer-events: none; /* Disable pointer events on hidden loader */
 }
 
 .loader {
@@ -29,7 +30,7 @@ body {
     height: 10px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 16px solid #ffffff; 
+    border-bottom: 16px solid #ffffff; /* Change color to white */
     animation: arrow 1s linear infinite;
 }
 
@@ -57,17 +58,17 @@ body {
 .loading-image {
     height: 50%;
     width: 70%;
-    max-width: 400px; 
-    max-height: 400px; 
-    margin-bottom: 20px; 
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 20px;
 }
 
 header {
     display: flex;
     justify-content: center;
-    opacity: 0; /* Initially set opacity to 0 */
+    opacity: 0;
     padding: 15px;
-    transition: opacity 0.5s ease; /* smooth fade transition */
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
 }
 
 ul {
@@ -79,28 +80,72 @@ ul {
 
 li a {
     text-decoration: none;
-   
+    color: #ffffff;
     font-size: 20pt;
-    color: white;
-    margin: 0 20px; /*spacing between list items */
+    margin: 0 20px; /* Adjust spacing between list items */
 }
+
 a:hover {
     text-shadow: 0px 0px 10px white, 0px 0px 10px white;
 }
+
 #heroimg {
-    opacity: 0; /* Initially set opacity to 0 */
-    transition: opacity 0.5s ease; /*  smooth fade transition */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
     border: 3px solid white;
     padding: 5px;
     text-align: center;
 }
-#cover{
+
+#cover {
     max-width: 100%;
     max-height: 800px;
+    border: 1px solid slateblue;
 }
-.content {
-    opacity: 0; /* Initially set opacity to 0 */
-    transition: opacity 0.5s ease; /*  smooth fade transition */
+
+.content-container {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
     border: 3px solid rgb(192, 10, 10);
     padding: 5px;
+    display: flex;
+    margin-top: 20px; /* Add spacing between content containers */
+}
+
+
+.left-content {
+    flex: 1; /* Take up remaining space */
+    border: 3px solid green; 
+}
+
+.right-content {
+    flex-shrink: 0; /* Do not allow shrinking */
+    margin-left: 20px;
+    border: 3px solid yellow; 
+}
+
+#c1 {
+    width: 100%; /* Ensure image takes full width */
+}
+
+.artists-name {
+    border: 3px solid pink; 
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
+}
+
+#gallery {
+    border: 3px solid orange; 
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
+}
+
+footer {
+    text-align: center;
+    border: 3px solid blue; 
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    margin-top: 20px; /* Add spacing above the footer */
 }
