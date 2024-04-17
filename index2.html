@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayscale Tattoo Collective</title>
+    <link rel="stylesheet" href="Styles\mainpage2.css">
+    <link rel="icon" type="image/x-icon"  href="Images\GSTLogo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head> 
+<body>
+   <!----> <div class="loader-wrapper">
+        <img src="Images/GSTLogo.png" alt="Loading..." class="loading-image">
+        <div class="loader"></div>
+    </div>
+    
+    <header>
+        <ul>
+            <li> <a href="#">Home </a></li>
+            <li> <a href="#">About us </a></li>
+            <li> <a href="#">Artists</a> </li>
+            <li> <a href="#"> Contact</a></li>
+        </ul>
+    </header>
+    <div id="heroimg"> <img id ="cover"src="Images\gstc.jpg"> </div>
+
+
+    <div class="content">
+       
+    </div>
+
+    <script>
+  window.addEventListener('load', function() {
+            //  delay to ensure the loading animation is displayed
+            setTimeout(function() {
+                var loaderWrapper = document.querySelector('.loader-wrapper');
+                loaderWrapper.classList.add('hidden'); // Add hidden class after delay
+                loaderWrapper.addEventListener('transitionend', function() {
+                    loaderWrapper.style.display = 'none'; // Hide loader after transition
+                });
+
+                var header = document.querySelector('header');
+                header.style.opacity = '1'; // Fade in header
+                var header = document.querySelector('heroimg');
+                heroimg.style.opacity = '1'; // Fade in heroimg
+                var content = document.querySelector('.content');
+                content.style.opacity = '1'; // Fade in content
+            }, 2000); // the delay time in milliseconds 
+        });
+    </script>
+</body>
+</html>
+
+    
+
+   
