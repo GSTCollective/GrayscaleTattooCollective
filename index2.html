@@ -52,6 +52,15 @@
             <img id="maps" src="Images\Capture.PNG">
         </div>
     </div>
+    <div id="services-container">  <!-- add here the services of the tattoo shop-->
+        <h1> Our Services</h1>
+        <div id="Tattoo">
+             <img src="#" alt="Tattoo service"> <h1> Tattoo</h1>
+        </div>
+        <div id="Piercings"> 
+            <img src="#" alt="Piercing service"> <h1> Piercing</h1>
+        </div>
+    </div>
     <div class="section">
     <h1 class="sectionH1">Meet the Artists</h1>
 </div>
@@ -151,10 +160,18 @@ window.addEventListener('load', function() {
         var footer = document.querySelector('footer');
         footer.style.opacity = '1'; // Fade in footer
 
-        // Enable scrolling after loading
-        document.body.style.overflow = 'auto';
+        // Fade in services
+        var servicesContainer = document.querySelector('#services-container');
+        servicesContainer.style.opacity = '1';
+        var services = document.querySelectorAll('#services-container div');
+          // Enable scrolling after loading
+          document.body.style.overflow = 'auto';
+        services.forEach(function(service) {
+            service.style.opacity = '1';
+        });
     }, 2000); //  delay time of loading screen animation in milliseconds (e.g., 2000ms = 2 seconds)
 });
+
 
 
         </script>
