@@ -227,4 +227,9 @@ footer {
     opacity: 0;
     transition: opacity 0.5s ease;
     margin-top: 20px;
+    background-color: rgb(61, 60, 60);
+}
+
+footer svg:hover{
+    fill: #ffffff;
 }
