@@ -40,8 +40,8 @@
     <div class="content-container">
         <div class="left-content">  <!-- location & schedule -->
             <h1>Location & Schedule</h1>
-            <p> LAS PIÑAS FINEST TATTOO SHOP <br>
-                105 P.Burgos St. Pamplona Uno
+            <p> Las Piñas Finest Tattoo shop located in
+                105 P.Burgos St. Pamplona Uno,
                 Las Piñas City
             </p>
         </div>
@@ -49,19 +49,47 @@
             <img id="maps" src="Images\Capture.PNG">
         </div>
     </div>
+    <h1 id="artistsH1">Meet the Artists</h1>
+ <div class="artists-container">
 
-    <div class="artists-name"> <!-- name of artists, pictures of artists, hyperlinks-->
-        Artists Section
+    <div class="artist">
+        <img src="artist1.jpg" alt="Artist 1">
+        <h3>Billy Jay Villanueva</h3>
+        <p>Specialties: Lorem, Ipsum</p>
+        <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <a href="artist1.html">View Portfolio</a>
     </div>
+    <div class="artist">
+        <img src="artist2.jpg" alt="Artist 2">
+        <h3>Cassiedine Roy</h3>
+        <p>Specialties: Lorem, Ipsum</p>
+        <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <a href="artist2.html">View Portfolio</a>
+    </div>
+    <div class="artist">
+        <img src="artist3.jpg" alt="Artist 3">
+        <h3>Reggie Dato-on</h3>
+        <p>Specialties: Lorem, Ipsum</p>
+        <p>Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <a href="artist3.html">View Portfolio</a>
+    </div>
+</div>
+
 
     <div id="gallery"> <!-- pictures of recent tattoo works-->
         Gallery Section
     </div>
 
-    <footer> © 2024 Grayscale Tattoo Collective </footer>
+    <footer> 
+        <a href="https://www.facebook.com/grayscaletattoocollective">
+            <svg id="FB-Icon"> </svg>
+        </a>
+        <p>© 2024 Grayscale Tattoo Collective </p>
+     </footer>
 
 
 <script>
+
 window.addEventListener('load', function() {
     // Delay to ensure the loading animation is displayed
     setTimeout(function() {
@@ -82,9 +110,12 @@ window.addEventListener('load', function() {
             container.style.opacity = '1'; // Fade in content containers
         });
 
-        var artistsName = document.querySelector('.artists-name');
-        artistsName.style.opacity = '1'; // Fade in artists' names
+        var artistsContainer = document.querySelector('.artists-container');
+        artistsContainer.style.opacity = '1'; // Fade in artists' names
+        artistsContainer.style.display = 'flex'; // Show artists container
 
+        var artistsh1 = document.querySelector('#artistsH1');
+        artistsh1.style.opacity = '1'; // Fade in artists' names
         var gallery = document.querySelector('#gallery');
         gallery.style.opacity = '1'; // Fade in gallery
 
@@ -92,7 +123,6 @@ window.addEventListener('load', function() {
         footer.style.opacity = '1'; // Fade in footer
     }, 2000); //  delay time in milliseconds (e.g., 2000ms = 2 seconds)
 });
-
 </script>
 
 </body>
