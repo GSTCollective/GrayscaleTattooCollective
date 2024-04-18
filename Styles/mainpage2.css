@@ -1,8 +1,10 @@
-* { /* HTML resetter */
+/* CSS Reset */
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
+/* General Styling */
 body {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -17,12 +19,12 @@ body {
     flex-direction: column;
     align-items: center;
     opacity: 1;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
 }
 
 .loader-wrapper.hidden {
     opacity: 0;
-    pointer-events: none; /* Disable pointer events on hidden loader */
+    pointer-events: none;
 }
 
 .loader {
@@ -30,7 +32,7 @@ body {
     height: 10px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 16px solid #ffffff; /* Change color to white */
+    border-bottom: 16px solid #ffffff;
     animation: arrow 1s linear infinite;
 }
 
@@ -64,11 +66,15 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     opacity: 0;
     padding: 15px;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
 }
 
 ul {
@@ -82,7 +88,7 @@ li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 20pt;
-    margin: 0 20px; /* Adjust spacing between list items */
+    margin: 0 20px;
 }
 
 a:hover {
@@ -91,7 +97,7 @@ a:hover {
 
 #heroimg {
     opacity: 0;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
     border: 3px solid white;
     padding: 5px;
     text-align: center;
@@ -99,53 +105,59 @@ a:hover {
 
 #cover {
     max-width: 100%;
-    max-height: 800px;
+    max-height: 700px;
     border: 1px solid slateblue;
 }
 
 .content-container {
     opacity: 0;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
     border: 3px solid rgb(192, 10, 10);
     padding: 5px;
     display: flex;
-    margin-top: 20px; /* Add spacing between content containers */
+    margin-top: 20px;
 }
 
-
 .left-content {
-    flex: 1; /* Take up remaining space */
-    border: 3px solid green; 
+    flex: 1;
+    border: 3px solid green;
+    padding: 10px;
 }
 
 .right-content {
-    flex-shrink: 0; /* Do not allow shrinking */
-    margin-left: 20px;
-    border: 3px solid yellow; 
+    flex-shrink: 0;
+    border: 3px solid yellow;
+    padding: 10px;
 }
 
 #c1 {
-    width: 100%; /* Ensure image takes full width */
+    width: 100%;
+}
+
+#maps {
+    width: 100%;
 }
 
 .artists-name {
-    border: 3px solid pink; 
+    border: 3px solid pink;
     padding: 15px;
     opacity: 0;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
+    margin-top: 20px;
 }
 
 #gallery {
-    border: 3px solid orange; 
+    border: 3px solid orange;
     padding: 15px;
     opacity: 0;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
+    transition: opacity 0.5s ease;
+    margin-top: 20px;
 }
 
 footer {
     text-align: center;
-    border: 3px solid blue; 
+    border: 3px solid blue;
     opacity: 0;
-    transition: opacity 0.5s ease; /* Add smooth fade transition */
-    margin-top: 20px; /* Add spacing above the footer */
+    transition: opacity 0.5s ease;
+    margin-top: 20px;
 }
