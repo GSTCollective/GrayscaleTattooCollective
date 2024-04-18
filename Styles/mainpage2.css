@@ -8,8 +8,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* General Styling */
+
 body {
+    overflow: hidden; /* forbid users from scrolling until loading screen finishes*/
     background-color: rgb(0, 0, 0);
     color: white;
 }
@@ -142,6 +143,22 @@ a:hover {
     width: 100%;
 }
 
+.section {
+    margin: 20px;
+    text-align: center;
+    border: 1px solid cyan;
+    opacity: 0; /* Add opacity setting */
+    transition: opacity 0.5s ease; /* Add transition property */
+}
+
+.sectionH1 {
+    color: white; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 1px solid cyan;
+}
+
+
 .artists-container {
     display: flex;
     justify-content: space-around;
@@ -150,28 +167,26 @@ a:hover {
     margin-top: 40px;
     opacity: 0;
     transition: opacity 0.5s ease;
+    border: 1px solid saddlebrown;
 }
-#artistsH1{
-    margin-top: 20px;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+
+
+
 .artist {
-    width: calc(33.33% - 20px); /* Adjust width based on number of artists */
+    width: calc(33.33% - 20px); 
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Add background color with opacity */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Add border with opacity */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .artist img {
     max-width: 100%;
-    border-radius: 50%; /* Make the image round */
+
 }
 
 .artist h3 {
@@ -181,6 +196,7 @@ a:hover {
 
 .artist p {
     margin: 5px 0;
+    
 }
 
 .artist a {
@@ -194,10 +210,8 @@ a:hover {
 }
 
 .artist a:hover {
-    background-color: #dddddd;
+    background-color: #a8a8a8;
 }
-
-
 
 #gallery {
     border: 3px solid orange;
