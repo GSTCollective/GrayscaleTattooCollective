@@ -147,7 +147,7 @@ a:hover {
     margin-top: 50px;
     opacity: 0; 
     transition: opacity 0.5s ease; 
-    border: 1px solid lime'
+    border: 1px solid rgb(138, 189, 138);
 }
 
 #services-container h1 {
@@ -161,11 +161,14 @@ a:hover {
 }
 
 #services-container img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     border: 3px solid white;
     transition: transform 0.3s ease;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 5px;
 }
 
 #services-container h1 {
@@ -249,12 +252,22 @@ a:hover {
 }
 
 #gallery {
-    border: 3px solid orange;
-    padding: 15px;
     opacity: 0;
-    transition: opacity 0.5s ease;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.tattooimg {
+    border-radius: 25px;
+    border: 3px solid gray;
+    box-shadow: 0px 0px 20px 5px white;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 25px;
+}
+
 
 footer {
     text-align: center;
