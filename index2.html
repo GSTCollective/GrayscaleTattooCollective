@@ -55,10 +55,10 @@
     <div id="services-container">  <!-- add here the services of the tattoo shop-->
         <h1> Our Services</h1>
         <div id="Tattoo">
-             <img src="#" alt="Tattoo service"> <h1> Tattoo</h1>
+             <img src="Images\Services\TattooJesus.jpg" alt="Tattoo service"> <h1> Tattoo</h1>
         </div>
         <div id="Piercings"> 
-            <img src="#" alt="Piercing service"> <h1> Piercing</h1>
+            <img src="Images\Services\Piercings.jpg" alt="Piercing service"> <h1> Piercing</h1>
         </div>
     </div>
     <div class="section">
@@ -93,9 +93,16 @@
     <h1 class="sectionH1">  Gallery </h1>
 </div>
 
-    <div id="gallery"> <!-- pictures of recent tattoo works-->
-        Gallery Section
-    </div>
+<div id="gallery">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (1).jpg">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (2).jpg">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (3).jpg">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (4).jpg">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (5).jpg">
+    <img class="tattooimg" src="Images\Tattoos\Tattoo (6).jpg">
+</div>
+
+ 
 
     <footer> 
         <a href="https://www.facebook.com/grayscaletattoocollective">
@@ -156,7 +163,9 @@ window.addEventListener('load', function() {
 
         var gallery = document.querySelector('#gallery');
         gallery.style.opacity = '1'; // Fade in gallery
+     
 
+        gallery.style.opacity = '1'; // Fade in gallery
         var footer = document.querySelector('footer');
         footer.style.opacity = '1'; // Fade in footer
 
