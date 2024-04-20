@@ -223,21 +223,31 @@ a:hover {
     margin-bottom: 15px;
     background-size: cover;
     background-repeat: no-repeat;
+
    
 }
 
-
+.artist-wrap {
+    overflow: hidden;
+    position: relative;
+  }
 .artist h3 {
     margin-top: 30px;
     font-size: 20px;
+  
+    
 }
-
+.artist span {
+    background: rgba(0, 0, 0, 0.4)
+   
+}
 #Bio {
     margin-top:  5px ;
-    
+   
 }
 #Specialties{
     margin-top: 90px;
+  
 }
 
 .artist a {
@@ -249,10 +259,13 @@ a:hover {
     border-radius: 20px;
     transition: background-color 0.3s ease;
     margin-top: 50px;
+    opacity: 1;
+    box-shadow: 0px 0px 15px 8px black;
 }
 
 .artist a:hover {
     background-color: #a8a8a8;
+    
 }
 
 #gallery {
