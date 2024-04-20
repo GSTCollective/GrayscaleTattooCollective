@@ -136,7 +136,7 @@ a:hover {
 }
 
 #c1 {
-    width: 100%;
+    max-width: 100%;
 }
 
 #maps {
@@ -211,7 +211,8 @@ a:hover {
 
 
 .artist {
-    width: calc(33.33% - 20px); 
+    width: 400px;
+    height: 350px;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -220,21 +221,23 @@ a:hover {
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
 }
 
-.artist img {
-    max-width: 100%;
-
-}
 
 .artist h3 {
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 20px;
 }
 
-.artist p {
-    margin: 5px 0;
+#Bio {
+    margin-top:  5px ;
     
+}
+#Specialties{
+    margin-top: 90px;
 }
 
 .artist a {
@@ -245,6 +248,7 @@ a:hover {
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s ease;
+    margin-top: 50px;
 }
 
 .artist a:hover {
