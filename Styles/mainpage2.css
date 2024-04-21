@@ -297,6 +297,7 @@ a:hover {
     margin: 25px;
 }
 
+/*
 .fullscreen-image {
     display: none;
     position: fixed;
@@ -318,7 +319,7 @@ a:hover {
     max-width: 90%;
     max-height: 90%;
 }
-
+*/
 .no-scroll {
     overflow: hidden;
 }
