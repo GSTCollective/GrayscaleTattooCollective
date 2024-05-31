@@ -56,25 +56,8 @@
     <img src="#" alt="Artwork 6">
 </div>
 
-    <script>
-
-window.addEventListener('load', function() {
-    // Prevent scrolling until the loading screen finishes
-    document.body.style.overflow = 'hidden';
-
-    // Delay to ensure the loading animation is displayed
-    setTimeout(function() {
-        var loaderWrapper = document.querySelector('.loader-wrapper');
-        loaderWrapper.classList.add('hidden'); // Add hidden class after delay
-        loaderWrapper.addEventListener('transitionend', function() {
-            loaderWrapper.style.display = 'none'; // Hide loader after transition
-        });
-        document.body.style.overflow = 'auto';
-        services.forEach(function(service) {
-            service.style.opacity = '1';
-        });
-    }, 2000); //  delay time of loading screen animation in milliseconds (e.g., 2000ms = 2 seconds)
-});
-    </script>
+<script src="Scripts\noscroll.js"></script>
+<script src="Scripts\loader.js"></script>
+<script src="Scripts\fadein.js"></script>
 </body>
 </html>

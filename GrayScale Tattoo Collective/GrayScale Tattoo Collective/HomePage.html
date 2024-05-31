@@ -195,59 +195,10 @@
 
         <p>© 2024 Grayscale Tattoo Collective </p>
      </footer>
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Prevent scrolling until the loading screen finishes
-            document.body.style.overflow = 'hidden';
-    
-            // Delay to ensure the loading animation is displayed
-            setTimeout(function() {
-                var loaderWrapper = document.querySelector('.loader-wrapper');
-                loaderWrapper.classList.add('hidden'); // Add hidden class after delay
-                loaderWrapper.addEventListener('transitionend', function() {
-                    loaderWrapper.style.display = 'none'; // Hide loader after transition
-                });
-    
-                var header = document.querySelector('header');
-                header.style.opacity = '1'; // Fade in header
-    
-                var heroimg = document.querySelector('#heroimg');
-                heroimg.style.opacity = '1'; // Fade in heroimg
-    
-                var contentContainers = document.querySelectorAll('.content-container');
-                var artistsContainer = document.querySelector('.artists-container');
-                var sections = document.querySelectorAll('.section');
-                var sectionH1 = document.querySelectorAll('.sectionH1');
-                var gallery = document.querySelector('#gallery');
-                var footer = document.querySelector('footer');
-                var servicesContainer = document.querySelector('#services-container');
-                var services = document.querySelectorAll('#services-container div');
-                
-                // Fade in all elements
-                [header, ...contentContainers, artistsContainer, ...sections, ...sectionH1, gallery, footer, servicesContainer].forEach(function(element) {
-                    element.style.opacity = '1';
-                });
-    
-                // Enable scrolling after loading
-                document.body.style.overflow = 'auto';
-    
-                // Set up smooth transitions for tattoo images on hover
-                var tattooImages = document.querySelectorAll('.tattooimg');
-    
-                tattooImages.forEach(function(image) {
-                    image.addEventListener('mouseenter', function() {
-                        this.style.transform = 'scale(1.1)';
-                        this.style.transition = 'transform 0.3s ease';
-                    });
-    
-                    image.addEventListener('mouseleave', function() {
-                        this.style.transform = 'scale(1)';
-                        this.style.transition = 'transform 0.3s ease';
-                    });
-                });
-            }, 2000); //  delay time of loading screen animation in milliseconds (e.g., 2000ms = 2 seconds)
-        });
-    </script>
+     <script src="Scripts\noscroll.js"></script>
+     <script src="Scripts\loader.js"></script>
+     <script src="Scripts\fadein.js"></script>
+     <script src="Scripts\gallery.js"></script>
     
     
 </body>
