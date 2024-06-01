@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/Contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .warning {
+            color: rgb(250, 246, 246);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="#artist-section">Artists</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="f2931e0f-c182-4be9-8b8d-3879feb7dd34">
+            <h3>Contact Us</h3>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span id="name-warning" class="warning">Only letters and spaces are allowed.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-warning" class="warning">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="h-captcha" data-sitekey="your-site-key"></div>
+            <div class="form-group">
+                <button type="submit">Submit Form</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var header = document.querySelector('header');
+        header.style.opacity = '1'; // Fade in header
+
+        var nameInput = document.getElementById('name');
+        var nameWarning = document.getElementById('name-warning');
+        var emailInput = document.getElementById('email');
+        var emailWarning = document.getElementById('email-warning');
+        var form = document.getElementById('contactForm');
+
+        nameInput.addEventListener('input', function (event) {
+            var invalidCharacters = /[^a-zA-Z\s]/g;
+            if (invalidCharacters.test(this.value)) {
+                nameWarning.style.display = 'inline';
+                this.value = this.value.replace(invalidCharacters, '');
+            } else {
+                nameWarning.style.display = 'none';
+            }
+        });
+
+        emailInput.addEventListener('input', function (event) {
+            validateEmail();
+        });
+
+        form.addEventListener('submit', function(event) {
+            if (!validateEmail()) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+
+        function validateEmail() {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailWarning.style.display = 'inline';
+                return false;
+            } else {
+                emailWarning.style.display = 'none';
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
