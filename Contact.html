@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="Styles/Contact.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        .warning {
-            color: rgb(250, 246, 246);
-            display: none;
-        }
-    </style>
+
 </head>
 <body>
+    <div class="loader-wrapper">
+        <img src="Images/GSTLogo.png" alt="Loading..." class="loading-image">
+        <div class="loader"></div>
+    </div>
     <header>
+        <div id="header-img">
+            <svg width="50" height="50" viewBox="0 0 699 809" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 201.5L348 0.5L699 201.5L632.5 251.5L348 87.5L74.5 245.5V563L351 724L621.5 563V442.5H522.5L438.5 405L522.5 368.5L694 371.5V606.5L348 809L0 606.5V201.5Z" fill="white"/>
+                <path d="M98.5 262L348 118.5L603 262.5L530.5 306L386 227V257.5L505 325.5L432.5 371L349.5 323.5L269 366.5V455L349.5 499.5L432.5 455L505 499.5L388 563.5V586.5L348 676.5L307.5 586.5V563.5L193 499.5V323.5L310.5 257.5V227L166 309.5L98.5 262Z" fill="white"/>
+                </svg>
+        </div>
+        <h2>Grayscale Tattoo Collective</h2>
         <ul>
             <li><a href="HomePage.html">Home</a></li>
             <li><a href="#artist-section">Artists</a></li>
@@ -47,47 +53,8 @@
             </div>
         </form>
     </div>
-
-    <script>
-        var header = document.querySelector('header');
-        header.style.opacity = '1'; // Fade in header
-
-        var nameInput = document.getElementById('name');
-        var nameWarning = document.getElementById('name-warning');
-        var emailInput = document.getElementById('email');
-        var emailWarning = document.getElementById('email-warning');
-        var form = document.getElementById('contactForm');
-
-        nameInput.addEventListener('input', function (event) {
-            var invalidCharacters = /[^a-zA-Z\s]/g;
-            if (invalidCharacters.test(this.value)) {
-                nameWarning.style.display = 'inline';
-                this.value = this.value.replace(invalidCharacters, '');
-            } else {
-                nameWarning.style.display = 'none';
-            }
-        });
-
-        emailInput.addEventListener('input', function (event) {
-            validateEmail();
-        });
-
-        form.addEventListener('submit', function(event) {
-            if (!validateEmail()) {
-                event.preventDefault(); // Prevent form submission
-            }
-        });
-
-        function validateEmail() {
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (!emailPattern.test(emailInput.value)) {
-                emailWarning.style.display = 'inline';
-                return false;
-            } else {
-                emailWarning.style.display = 'none';
-                return true;
-            }
-        }
-    </script>
+    <script src="Scripts\noscroll.js"></script>
+    <script src="Scripts\loader.js"></script>
+    <script src="Scripts\contact.js"></script>
 </body>
 </html>
